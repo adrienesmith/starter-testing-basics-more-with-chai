@@ -16,6 +16,14 @@ describe("medianScore", () => {
   });
 });
 
+describe("medianScore", () => {
+  it("should return null if there are no students", () => {
+    const students = [];
+    const actual = medianScore(students);
+    expect(actual).to.be.null;
+  });
+});
+
 describe("topScoringStudent", () => {
   it("should return the student with the highest score for a list of students", () => {
     const students = [
@@ -28,5 +36,13 @@ describe("topScoringStudent", () => {
     const actual = topScoringStudent(students);
     const expected = { name: "Riley Morgan", score: 9.8 };
     expect(actual).to.eql(expected);
+  });
+});
+
+describe("topScoringStudent", () => {
+  it("should return the null if there are no students", () => {
+    const students = [];
+    const actual = topScoringStudent(students);
+    expect(actual).to.be.null;
   });
 });
